@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Vivencia | Fotografía Profesional y Servicios Escolares</title>
+
+    <!-- Favicon para la pestaña -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <!-- Vista previa para Meta / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Studio Vivencia | Fotografía Profesional">
+    <meta property="og:description" content="Especialistas en Paquetes de Graduación, Credenciales PVC, Eventos Sociales y Marquería.">
+    <meta property="og:image" content="https://studiovivencia.com/logo.png">
+
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --accent-blue: #38bdf8;
+            --accent-gold: #f59e0b;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-header {
+            max-width: 220px;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            flex: 1;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            color: var(--accent-blue);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Banner del Catálogo Protegido */
+        .catalog-banner {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 2px solid var(--accent-blue);
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .catalog-banner h2 {
+            color: var(--accent-gold);
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+        }
+
+        .catalog-banner p {
+            color: var(--text-sub);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .btn-catalog {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: #0f172a;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-catalog:hover {
+            background-color: #0284c7;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Cuadrícula de Servicios */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            background-color: var(--bg-card);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+        }
+
+        .service-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .service-card h3 {
+            color: var(--accent-blue);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .service-card p {
+            color: var(--text-sub);
+            font-size: 0.9rem;
+        }
+
+        /* Sección de Contacto */
+        .contact-section {
+            background-color: var(--bg-card);
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid #334155;
+        }
+
+        .contact-section h2 {
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #0f172a;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            transition: all 0.2s ease;
+        }
+
+        .contact-item:hover {
+            border-color: var(--accent-blue);
+            transform: scale(1.03);
+        }
+
+        footer {
+            background-color: #090d16;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            border-top: 1px solid #1e293b;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .container { padding: 25px 15px; }
+            .contact-info { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Studio Vivencia Logo" class="logo-header" onerror="this.style.display='none'">
+    </header>
+
+    <div class="container">
+        
+        <section class="hero">
+            <h1>Studio Vivencia</h1>
+            <p>Estudio de fotografía profesional especializado en paquetes escolares de graduación, credenciales PVC para instituciones, eventos sociales y marquería de alta calidad.</p>
+        </section>
+
+        <!-- Acceso al Catálogo Protegido -->
+        <section class="catalog-banner">
+            <h2>🎓 Muestrario y Catálogo Escolar</h2>
+            <p>Accede a nuestro catálogo digital interactivo para ver los modelos de credenciales PVC, paquetes de graduación y promocionales.</p>
+            <a href="https://catalogo.studiovivencia.com" class="btn-catalog" target="_blank">📖 Abrir Catálogo Digital</a>
+            <p style="font-size: 0.8rem; margin-top: 12px; color: #64748b;">* Requiere la clave de acceso otorgada por el estudio.</p>
+        </section>
+
+        <!-- Cuadrícula de Servicios -->
+        <section class="services-grid">
+            <div class="service-card">
+                <span class="icon">🎓</span>
+                <h3>Paquetes de Graduación</h3>
+                <p>Fotografía panorámica, carpetas personalizadas en curpiel/tactopiel, diplomas y muestras para todos los niveles escolares.</p>
+            </div>
+
+            <div class="service-card">
+                <span class="icon">🪪</span>
+                <h3>Credenciales PVC</h3>
+                <p>Impresión de alta durabilidad con tecnología QR para control de asistencia, hologramas de seguridad y cordones personalizados.</p>
+            </div>
+
+            <div class="service-card">
+                <span class="icon">📸</span>
+                <h3>Eventos Sociales</h3>
+                <p>Cobertura fotográfica profesional para bodas, XV años, bautizos y eventos especiales con entrega digital e impresa.</p>
+            </div>
+
+            <div class="service-card">
+                <span class="icon">🖼️</span>
+                <h3>Marquería Fina</h3>
+                <p>Marcos de madera MDF hechos a medida, acabados poliéster y molduras arquitectónicas personalizadas.</p>
+            </div>
+        </section>
+
+        <!-- Información de Contacto Directo -->
+        <section class="contact-section">
+            <h2>Atención Comercial</h2>
+            <p style="color: var(--text-sub); font-size: 0.95rem;">Atención a escuelas y particulares bajo cita previa.</p>
+            
+            <div class="contact-info">
+                <a href="https://wa.me/525514998843" class="contact-item" target="_blank">
+                    💬 WhatsApp: +52 55 1499 8843
+                </a>
+                <a href="mailto:contacto@studiovivencia.com" class="contact-item">
+                    ✉️ contacto@studiovivencia.com
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        © 2026 Studio Vivencia. Todos los derechos reservados. | Estado de México.
+    </footer>
+
+</body>
+</html>
