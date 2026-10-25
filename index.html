@@ -82,7 +82,7 @@
             margin: 0 auto;
         }
 
-        /* Banner del Catálogo Protegido */
+        /* Banner del Catálogo */
         .catalog-banner {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             border: 2px solid var(--accent-blue);
@@ -124,7 +124,7 @@
             transform: translateY(-2px);
         }
 
-        /* Cuadrícula de Servicios con Imágenes */
+        /* Cuadrícula de Servicios - Imágenes Ajustadas */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -149,13 +149,24 @@
             border-color: var(--accent-blue);
         }
 
-        .service-img {
+        .img-container {
             width: 100%;
-            height: 160px;
-            object-fit: cover;
+            aspect-ratio: 4 / 3;
+            background-color: #0b0f19;
             border-radius: 8px;
             margin-bottom: 15px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 8px;
         }
 
         .service-card h3 {
@@ -240,42 +251,50 @@
             <p>Estudio de fotografía profesional especializado en paquetes escolares de graduación, credenciales PVC para instituciones, eventos sociales y marquería de alta calidad.</p>
         </section>
 
-        <!-- Acceso al Catálogo Protegido -->
+        <!-- Acceso al Catálogo -->
         <section class="catalog-banner">
             <h2>🎓 Muestrario y Catálogo Escolar</h2>
             <p>Accede al catálogo digital interactivo para ver los modelos de credenciales PVC, paquetes de graduación y promocionales.</p>
             <a href="https://catalogo.studiovivencia.com/" class="btn-catalog" target="_blank" rel="noopener">📖 Abrir Catálogo Digital</a>
-            <p style="font-size: 0.8rem; margin-top: 12px; color: #64748b;">* Requiere la clave de acceso otorgada por el estudio.</p>
+            <p style="font-size: 0.8rem; margin-top: 12px; color: #64748b;">* Contenido exclusivo de muestras.</p>
         </section>
 
-        <!-- Cuadrícula de Servicios con Imágenes PNG -->
+        <!-- Cuadrícula de Servicios -->
         <section class="services-grid">
             <div class="service-card">
-                <img src="graduaciones.png" alt="Paquetes de Graduación" class="service-img" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Graduaciones'">
+                <div class="img-container">
+                    <img src="graduaciones.png" alt="Paquetes de Graduación" class="service-img" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Graduaciones'">
+                </div>
                 <h3>Paquetes de Graduación</h3>
                 <p>Fotografía panorámica, carpetas personalizadas en curpiel/tactopiel, diplomas y muestras para todos los niveles escolares.</p>
             </div>
 
             <div class="service-card">
-                <img src="credenciales.png" alt="Credenciales PVC" class="service-img" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Credenciales+PVC'">
+                <div class="img-container">
+                    <img src="credenciales.png" alt="Credenciales PVC" class="service-img" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Credenciales+PVC'">
+                </div>
                 <h3>Credenciales PVC</h3>
                 <p>Impresión de alta durabilidad con tecnología QR para control de asistencia, hologramas de seguridad y cordones personalizados.</p>
             </div>
 
             <div class="service-card">
-                <img src="eventos.png" alt="Eventos Sociales" class="service-img" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Eventos+Sociales'">
+                <div class="img-container">
+                    <img src="eventos.png" alt="Eventos Sociales" class="service-img" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Eventos+Sociales'">
+                </div>
                 <h3>Eventos Sociales</h3>
                 <p>Cobertura fotográfica profesional para bodas, XV años, bautizos y eventos especiales con entrega digital e impresa.</p>
             </div>
 
             <div class="service-card">
-                <img src="marqueria.png" alt="Marquería Fina" class="service-img" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Marqueria+Fina'">
+                <div class="img-container">
+                    <img src="marqueria.png" alt="Marquería Fina" class="service-img" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Marqueria+Fina'">
+                </div>
                 <h3>Marquería Fina</h3>
                 <p>Marcos de madera MDF hechos a medida, acabados poliéster y molduras arquitectónicas personalizadas.</p>
             </div>
         </section>
 
-        <!-- Información de Contacto Directo -->
+        <!-- Información de Contacto -->
         <section class="contact-section">
             <h2>Atención Comercial</h2>
             <p style="color: var(--text-sub); font-size: 0.95rem;">Atención a escuelas y particulares bajo cita previa.</p>
